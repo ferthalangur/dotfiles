@@ -147,20 +147,12 @@
 ;;;(setq create-lockfiles nil)
 
 ;;;
-;;; A major mode for editing CSS, downloaded from:
-;;;   http://www.garshol.priv.no/download/software/css-mode/css-mode.el
+;;; A major mode for editing PHP code, from https://github.com/ejmr/php-mode
 ;;;
 
-;;;(autoload 'css-mode "css-mode")
-;;;(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
-
-;;;
-;;; A major mode for editing PHP code, downloaded from:
-;;;   http://php-mode.sourceforge.net/
-;;;
-
-;;;(autoload 'php-mode "php-mode" "Major mode for editing PHP files" t)
-;;;(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+(autoload 'php-mode "php-mode/php-mode" "Major mode for editing PHP files" t)
+(add-to-list 'load-path "~/.emacs.d/lisp/php-mode/skeleton/php-ext.el")
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 
 ;;;
 ;;; A major mode for editing Ruby programs as well as Rakefiles
