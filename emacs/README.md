@@ -6,9 +6,11 @@ Configuration files and Elisp libraries for Emacs
 
 ## Contents ##
 
-`.emacs.d/lisp` : Elisp libraries for functions and modes that I use
+`dot_emacs.d/lisp/` : Elisp libraries for functions and modes that I use often
 
-`.emacs.el` : EMACS startup file, with years of accreted stuff    
+`dot_emacs.el` : Current .emacs.el startup file
+
+`legacy/` : Snippets for various functions, acquired cruft over the years
 
 
 
