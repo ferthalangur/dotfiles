@@ -26,13 +26,30 @@ they will be useful to other sysadmins as well.
 
 ## How To Use This Repository ##
 
-Doing a search of [GitHub](github.com), I find 67,561 repositories,
-some that include refined installation scripts and other tools. I'm
-not there yet. Feel free to browse, clone, fork, copy what you find
-useful. No warranty, bla bla bla ... if you find something is useful,
-or broken, drop me a line.
+Doing a search for "dotfiles" on [GitHub](https://github.com), I find
+67,561 repositories, some that include refined installation scripts
+and other tools. 
+
+Eventually, this might turn into a beautifully
+crafted, elegant set of template files that embodies a convention to
+include local modifications or augmentations, etc. I'm not there
+yet. Right now I am just trying to tidy up my own mess.
+
+Feel free to browse, clone, fork,
+copy what you find useful. No warranty, bla bla bla ... if you find
+something is useful, or broken, drop me a line: [rbj@spotch.com]
 
 ## Contents ##
+
+`emacs` : Emacs startup and Elisp files
+
+`git` : Git global configuration
+
+`linux` : Startup files specific to Linux
+
+`osx` : Startup files specific to OS/X (Mac OS)
+
+
 
 
 
