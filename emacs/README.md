@@ -2,15 +2,26 @@
 
 ## Overview ##
 
-Configuration files and Elisp libraries for Emacs
+Configuration files libraries for Emacs
+
+## Installation ##
+
+Everything in this directory should be copied into a folder named
+_.emacs.d_ in your home directory. Most of the configuration is found in
+init.el ... which is referred to in most of my other README files as
+.emacs.el because that is where it used to live.
+
+Useful information about configuring this in
+[https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html]
 
 ## Contents ##
 
-`dot_emacs.d/lisp/` : Elisp libraries for functions and modes that I use often
+`init.el` : The Emacs initialization file
 
-`dot_emacs.el` : Current .emacs.el startup file
+`lisp/` : Any Elisp libraries required by the init file
 
-`legacy/` : Snippets for various functions, acquired cruft over the years
+`legacy/` : Snippets for various functionality, acquired cruft over the
+years ... all obsolete now probably.
 
 
 
