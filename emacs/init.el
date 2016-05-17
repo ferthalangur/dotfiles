@@ -83,40 +83,37 @@
 ;;;(setq create-lockfiles nil)
 
 ;;;
-;;; A major mode for editing PHP code, from https://github.com/ejmr/php-mode
+;;; Package Manager and MELPA repository
 ;;;
+;;; Ideas from http://stackoverflow.com/questions/10092322/
+(require 'package)
+; list of package sources
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
-(autoload 'php-mode "php-mode/php-mode" "Major mode for editing PHP files" t)
-(add-to-list 'load-path "~/.emacs.d/lisp/php-mode/skeleton/php-ext.el")
-(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+; activate all the packages (in particular autoloads
+(package-initialize)
 
-;;;
-;;; A major mode for editing Puppet manifests, downloaded
-;;;    from: https://github.com/puppetlabs/puppet-syntax-emacs
-;;;
-(autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests" t)
-(add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
+; fetch the list of packages available
+(unless (file-exists-p package-user-dir)
+  (package-refresh-contents))
 
-;;;
-;;; Some keyboard macros
-;;;
+(defun ensure-package-installed (&rest packages)
+  "Assure every package is installed, ask for installation if it is not."
+  (mapcar
+   (lambda (package)
+     ;; (package-installed-p 'evil)
+     (if (package-installed-p package)
+	 nil
+       (if (y-or-n-p (format "Package %s is missing. Install it? " package))
+	   (package-install package)
+	 package)))
+   packages))
 
-;;;
-;;; And some stuff that I'm not sure where it came from
-;;;
+(ensure-package-installed 'grails-mode 'puppet-mode 'php-mode)
 
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(gud-gdb-command-name "gdb --annotate=1")
- '(large-file-warning-threshold nil)
- '(safe-local-variable-values (quote ((no-auto-fill-mode . 1) (auto-fill-mode . 0)))))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-mode))
 
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
