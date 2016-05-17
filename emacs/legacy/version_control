@@ -1,0 +1,20 @@
+; -*- mode: Lisp; fill-column: 75; comment-column: 50; -*-
+
+;;;
+;;; Legacy .emacs.el code - version control
+;;;
+
+;; Version control info
+;;(setq version-control t)		; Enable numbered backups
+;;(setq kept-old-versions 0)              ; Throw out original versions
+;;(setq kept-new-versions 5)              ; Keep the five most recent versions
+;;(setq delete-old-versions t)            ; "Middle Versions" will be deleted
+                                        ; silently!
+;;(setq trim-versions-without-asking t)	; delete excess backups silently
+;;(setq dired-kept-versions 1)            ; # of versions to keep when
+                                        ; deleting files with dired
+
+;; For multi-users of files, use cp instead of mv
+;;(setq backup-by-copying-when-linked t)	   ;don't destroy other hard links
+;;(setq backup-by-copying-when-mismatch t)   ;preserves owner if not you
+

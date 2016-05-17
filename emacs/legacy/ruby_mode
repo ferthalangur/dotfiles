@@ -1,0 +1,34 @@
+; -*- mode: Lisp; fill-column: 75; comment-column: 50; -*-
+
+;;;
+;;; Legacy .emacs.el code - Ruby mode now built into Emacs
+;;;
+
+;;;
+;;; A major mode for editing Ruby programs as well as Rakefiles
+;;;
+(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
+(add-to-list 'auto-mode-alist
+	     '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist
+	     '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
+
+(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
+
+;;;
+;;; Automatic indentation in ruby-mode
+;;;
+(add-hook 'ruby-mode-hook (lambda () (local-set-key "\r" 'newline-and-indent)))
+
+;;;
+;;; If you want to run Ruby inside Emacs:
+;;;
+(require 'inf-ruby)
+
+;;;
+;;; Electric commands, which can insert some text automatically
+;;;
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+
+

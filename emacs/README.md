@@ -17,8 +17,7 @@ Configuration files and Elisp libraries for Emacs
 
 
 
-
-
-
-
-
+/* Local Variables: */
+/* mode: text       */
+/* fill-column: 75; */
+/* End:             */

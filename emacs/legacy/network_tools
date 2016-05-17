@@ -1,0 +1,13 @@
+; -*- mode: Lisp; fill-column: 75; comment-column: 50; -*-
+
+;;;
+;;; Legacy .emacs.el code - IRC and Finger ... these are now built-ins
+;;;
+
+;;;
+;;;    Kiwi
+;;;
+;;(autoload 'irc "Kiwi" "Internet Relay Chat Client." t nil)
+;;;
+;;(autoload 'finger "finger" "Finger Client" t nil)
+

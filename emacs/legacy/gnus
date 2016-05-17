@@ -1,0 +1,15 @@
+; -*- mode: Lisp; fill-column: 75; comment-column: 50; -*-
+
+;;;
+;;; Legacy .emacs.el code - GNUS (Gnu Newsreader) configuration
+;;;
+
+;;;
+;;;    Stuff for GNUS
+;;;
+;;;(setq gnus-select-method '(nntp "news.his.com"))
+;;;(setq gnus-local-domain "spotch.com")
+;;;(setq gnus-local-organization "Entropy")
+;;;(autoload 'gnus "gnus" "Read USENET news." t)
+;;;(autoload 'gnus-post-news "gnuspost.el" "Post a USNET message." t)
+;;;(setq gnus-default-article-saver 'gnus-Subject-save-in-mail)

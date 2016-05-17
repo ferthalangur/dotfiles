@@ -1,0 +1,38 @@
+; -*- mode: Lisp; fill-column: 75; comment-column: 50; -*-
+
+;;;
+;;; Legacy .emacs.el code - Mailcrypt (integrate GPG with VMand GNUS))
+;;;
+
+;;;
+;;;    Stuff for Mailcrypt
+;;;
+;;;(load-library "mailcrypt")
+;;(mc-setversion "gpg")   ; for PGP 2.6 (default); also "5.0" and "gpg"
+
+;;(autoload 'mc-install-write-mode "mailcrypt" nil t)
+;;(autoload 'mc-install-read-mode "mailcrypt" nil t)
+;;(add-hook 'mail-mode-hook 'mc-install-write-mode)
+
+;(setq mc-pgp-keydir "/home/squash1/robjen/gnupg")
+;(setq mc-gpg-path "/usr/local/bin/gpg2")
+;(setq mc-gpg-user-id "robjen-2002-p")
+;(setq mc-gpg-display-snarf-output t)
+;(setq mc-passwd-timeout 0)
+;(setq mc-pgp-fetch-methods
+;      '(mc-pgp-fetch-from-keyrings mc-pgp-fetch-from-http))
+;(setq mc-pgp-fetch-keyring-list
+;      '("/home/squash1/robjen/.pgp/pubring.pkr" "/home/squash1/robjen/.pgp/pubring.pgp")) 
+;
+; Hook mailcrypt into VM:
+;
+;(add-hook 'vm-mode-hook 'mc-install-read-mode)
+;(add-hook 'vm-summary-mode-hook 'mc-install-read-mode)
+;(add-hook 'vm-virtual-mode-hook 'mc-install-read-mode)
+;(add-hook 'vm-mail-mode-hook 'mc-install-write-mode)
+;
+; Hook mailcrypt into GNUS:
+;
+;(add-hook 'gnus-summary-mode-hook 'mc-install-read-mode)
+;(add-hook 'news-reply-mode-hook 'mc-install-write-mode)
+

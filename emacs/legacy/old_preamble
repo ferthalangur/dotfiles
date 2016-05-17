@@ -1,0 +1,21 @@
+;;;
+;;; This stuff was from the beginning of my .emacs.el forever
+;;; ... mostly fixed problems by now.
+;;;
+
+;;;
+;;;	The following are a security feature that should
+;;; be included by default in everyone's .emacs!
+;;;
+;;;;(setq inhibit-local-variables t)
+;;;;(setq enable-local-variables nil)
+;;; I believe it is a security hole to remove the next line:
+;;;;(put 'eval-expression 'disabled nil)
+;;; Despite RMS's misgivings, set-input-mode seeems :-) to fix the flow-
+;;;control problem on the ISN.  Who knows what else it might break!
+;;;Of course, it leaves us without a Control-Q key for quote, but
+;;; CTRL-S seems to work!
+;;;(set-input-mode nil t nil)
+;;;(global-unset-key "\C-s")
+;;;(global-unset-key "\C-x\C-s")
+;;;
